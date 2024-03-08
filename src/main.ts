@@ -4,6 +4,7 @@ import routes from '~pages'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import './assets/css/style.css'
+import './assets/css/main.css'
 
 const app = createApp(App)
 
