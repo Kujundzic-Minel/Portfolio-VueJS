@@ -10,4 +10,5 @@ import cards from '@/components/cards.vue';
   <mySkills />
   <skillBar />
   <cards />
+  <skillBar />
 </template>

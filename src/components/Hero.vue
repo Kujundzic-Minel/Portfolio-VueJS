@@ -15,9 +15,9 @@
           <button class="px-6 py-3 rounded-full mr-4 mb-4 md:mb-0 bg-gradient-to-br from-[#60A337] via-[#8ebe71] to-[#B7F05B] hover:bg-slate-200 text-black w-full md:w-fit">
             Hire me
           </button>
-          <button class="px-6 py-3 rounded-full bg-transparent hover:bg-slate-800 text-white border border-white w-full md:w-fit">
-            Download CV
-          </button>
+          <button class="px-6 py-3 rounded-full bg-transparent hover:bg-slate-800 text-white border w-full md:w-fit">
+  Download CV
+</button>
         </div>
       </div>
       <div class="md:w-1/2 p-4 opacity-0 -translate-x-full animate-slide-left">

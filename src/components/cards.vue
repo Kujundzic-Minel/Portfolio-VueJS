@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container p-12">
     <div class="cards-grid">
       <div class="card">
         <div class="content-card">
@@ -113,6 +113,9 @@ body {
   padding-bottom: 141%; /* Rapport d'aspect 16:9 (9/16 = 0.5625, donc padding-bottom: 56.25%) */
   perspective: 1000px;
   position: relative;
+}
+.card:hover {
+  z-index: 10;
 }
 .content-card {
   width: 100%;
