@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import Hero from '@/components/Hero.vue';
 import mySkills from '@/components/mySkills.vue';
