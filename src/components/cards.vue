@@ -41,9 +41,9 @@ export default {
         <div class="content-card">
           <img src="/image/TaVue.png" alt="" />
           <div
-            className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
+            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
           >
-            <div className="p-4 text-white font-semibold">
+            <div class="p-4 text-white font-semibold">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
                 similique! Iste, quos?
@@ -57,9 +57,9 @@ export default {
         <div class="content-card">
           <img src="/image/kyks.png" alt="" />
           <div
-            className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
+            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
           >
-            <div className="p-4 text-white font-semibold">
+            <div class="p-4 text-white font-semibold">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
                 similique! Iste, quos?
@@ -73,9 +73,9 @@ export default {
         <div class="content-card">
           <img src="/image/kyks.png" alt="" />
           <div
-            className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
+            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
           >
-            <div className="p-4 text-white font-semibold">
+            <div class="p-4 text-white font-semibold">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
                 similique! Iste, quos?
