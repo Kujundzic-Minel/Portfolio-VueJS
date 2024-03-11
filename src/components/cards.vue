@@ -110,7 +110,7 @@ body {
 .card {
   width: 100%;
   height: 0;
-  padding-bottom: 141%; /* Rapport d'aspect 16:9 (9/16 = 0.5625, donc padding-bottom: 56.25%) */
+  padding-bottom: 90%; /* Rapport d'aspect 4:3 (3/4 = 0.75, donc padding-bottom: 75%) */
   perspective: 1000px;
   position: relative;
 }
