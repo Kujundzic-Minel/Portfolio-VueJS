@@ -1,5 +1,5 @@
 <template>
-  <nav class="m-4 sticky top-[30px] z-50">
+  <nav class="m-4 sticky top-[30px] z-50 HeaderAnimation">
     <div
       class="flex justify-between items-center p-2 bg-[#353232] bg-opacity-50 rounded-full border border-[#60A337]"
     >
@@ -62,7 +62,7 @@
         <li class="list-none">Skills</li>
         <li class="list-none">Project</li>
         <div
-          class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover mt-4"
+          class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
         >
           <button class="text-white font-bold text-lg px-6">Contact me</button>
         </div>

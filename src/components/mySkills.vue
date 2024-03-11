@@ -3,7 +3,7 @@
 
 <template>
   <main>
-    <div class="w-full flex justify-center">
+    <div class="w-full flex justify-center ">
       <div class="flex flex-wrap justify-center mt-8">
         <img
           src="/image/Adobe_Creative_Cloud_rainbow_icon 1.svg"
@@ -22,7 +22,7 @@
         />
       </div>
     </div>
-    <div class="w-full flex justify-center">
+    <div class="w-full flex justify-center pb-7">
       <div class="flex flex-wrap justify-center">
         <img
           src="/image/typescript-logo-B29A3F462D-seeklogo 1.svg"

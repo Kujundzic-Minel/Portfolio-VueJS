@@ -7,4 +7,5 @@ import skillBar from '@/components/skillBar.vue';
   <Hero />
   <skillBar />
   <mySkills />
+  <skillBar />
 </template>
