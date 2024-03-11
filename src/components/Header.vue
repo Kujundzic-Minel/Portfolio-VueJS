@@ -1,7 +1,7 @@
 <template>
   <nav class="m-4 sticky top-[30px] z-50 HeaderAnimation">
     <div
-      class="flex justify-between items-center p-2 bg-[#353232] bg-opacity-50 rounded-full border border-[#60A337]"
+      class="flex justify-between items-center p-2 bg-[#353232] bg-opacity-50 rounded-full border border-[#60A337] backdrop-blur-sm"
     >
       <div class="flex items-center">
         <img
@@ -11,29 +11,25 @@
         />
       </div>
       <ul
-        class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl"
+        class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl "
       >
-        <li class="list-none">
+        <li class="list-none nav-link hover:font-semibold">
           <a href="/">Home</a>
+          <span class="nav-underline"></span>
         </li>
-        <li class="list-none">Skills</li>
-        <li class="list-none">Project</li>
+        <li class="list-none nav-link hover:font-semibold">Skills <span class="nav-underline"></span></li>
+        <li class="list-none nav-link hover:font-semibold">Project <span class="nav-underline"></span></li>
       </ul>
       <div class="flex items-center">
         <div
           class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
         >
-          <button
-            class="text-white font-bold text-xs sm:text-sm lg:text-xl px-2 sm:px-4 lg:px-6"
-          >
+          <button class="text-white font-bold text-xs sm:text-sm lg:text-xl px-2 sm:px-4 lg:px-6">
             Contact me
           </button>
         </div>
         <div class="md:hidden ml-2 sm:ml-4">
-          <button
-            class="text-white focus:outline-none"
-            @click="isOpen = !isOpen"
-          >
+          <button class="text-white focus:outline-none" @click="isOpen = !isOpen">
             <svg
               class="w-6 h-6"
               viewBox="0 0 24 24"
@@ -53,9 +49,7 @@
       </div>
     </div>
     <div v-show="isOpen" class="md:hidden">
-      <ul
-        class="bg-[#353232] bg-opacity-25 rounded-lg p-4 mt-2 space-y-2 text-white text-sm"
-      >
+      <ul class="bg-[#353232] bg-opacity-25 rounded-lg p-4 mt-2 space-y-2 text-white text-sm">
         <li class="list-none">
           <a href="/">Home</a>
         </li>
@@ -64,7 +58,7 @@
         <div
           class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
         >
-          <button class="text-white font-bold text-lg px-6">Contact me</button>
+          <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
         </div>
       </ul>
     </div>
@@ -80,6 +74,7 @@ const isOpen = ref(false);
 .HeaderAnimation {
   animation: HeaderAnimation 1s ease-out forwards;
 }
+
 @keyframes HeaderAnimation {
   0% {
     transform: translateY(-200%);
@@ -87,5 +82,32 @@ const isOpen = ref(false);
   100% {
     transform: translateY(0);
   }
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.nav-link {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #60a337;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-underline {
+  width: 100%;
 }
 </style>
