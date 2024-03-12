@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script>
 </script>
 <template>
@@ -21,4 +22,3 @@
         </footer>
     </body>
 </template>
-

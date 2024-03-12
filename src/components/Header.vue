@@ -1,3 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup>
+import { ref } from 'vue'
+const isOpen = ref(false)
+</script>
+
 <template>
   <nav class="m-4 sticky top-[30px] z-50 HeaderAnimation">
     <div
@@ -11,31 +17,30 @@
         />
       </div>
       <ul
-        class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl "
+        class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl"
       >
         <li class="list-none nav-link hover:font-semibold">
           <a href="/">Home</a>
           <span class="nav-underline"></span>
         </li>
-        <li class="list-none nav-link hover:font-semibold">Skills <span class="nav-underline"></span></li>
-        <li class="list-none nav-link hover:font-semibold">Project <span class="nav-underline"></span></li>
+        <li class="list-none nav-link hover:font-semibold">
+          Skills <span class="nav-underline"></span>
+        </li>
+        <li class="list-none nav-link hover:font-semibold">
+          Project <span class="nav-underline"></span>
+        </li>
       </ul>
       <div class="flex items-center">
         <div
           class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
         >
           <button class="text-white font-bold text-xs sm:text-sm lg:text-xl px-2 sm:px-4 lg:px-6">
-            Contact me
+            <a href="/contact">Contact me</a>
           </button>
         </div>
         <div class="md:hidden ml-2 sm:ml-4">
           <button class="text-white focus:outline-none" @click="isOpen = !isOpen">
-            <svg
-              class="w-6 h-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M4 6H20M4 12H20M4 18H20"
                 stroke="currentColor"
@@ -64,50 +69,3 @@
     </div>
   </nav>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-const isOpen = ref(false);
-</script>
-
-<style>
-.HeaderAnimation {
-  animation: HeaderAnimation 1s ease-out forwards;
-}
-
-@keyframes HeaderAnimation {
-  0% {
-    transform: translateY(-200%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.backdrop-blur-sm {
-  backdrop-filter: blur(4px);
-}
-
-.nav-link {
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.nav-link:hover {
-  transform: scale(1.1);
-}
-
-.nav-underline {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #60a337;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover .nav-underline {
-  width: 100%;
-}
-</style>

@@ -33,35 +33,3 @@
     </div>
   </section>
 </template>
-
-<style>
-.animate-slide-left {
-  animation: slide-right 1s ease-in-out forwards;
-}
-
-.animate-slide-right {
-  animation: slide-left 1s ease-in-out forwards;
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-</style>

@@ -1,3 +1,153 @@
 body {
-    background-color: #272727;
+  background-color: #272727;
+}
+
+/* STYLE POUR LE CURSEUR PERSONNALISE */
+#mouse {
+  position: fixed; /* Changé de 'absolute' à 'fixed' pour un positionnement global */
+  top: 0; /* Initialisé à 0; il sera mis à jour par JavaScript */
+  left: 0; /* Initialisé à 0; il sera mis à jour par JavaScript */
+  width: 20px; /* Taille réduite pour l'exemple */
+  height: 20px; /* Taille réduite pour l'exemple */
+  border-radius: 50%;
+  border: 2px solid rgb(200, 247, 211);
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Assurez-vous que le curseur ne gêne pas les clics */
+  z-index: 999;
+}
+
+/* STYLE POUR LES CARDS */
+.container {
+  max-width: 1200px;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  width: 100%;
+  height: 0;
+  padding-bottom: 90%;
+  perspective: 1000px;
+  position: relative;
+}
+.card:hover {
+  z-index: 10;
+}
+.content-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  transition: all 0.15s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.15s ease-out;
+  border-radius: 25px;
+  mix-blend-mode: hard-light;
+  background: radial-gradient(circle at 50% 0%, rgb(200, 247, 211), transparent);
+}
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* STYLE POUR LES SEPARATEURS */
+.separator {
+  margin: 0 auto; /* Centre la barre */
+  width: 95%; /* Largeur de la barre */
+}
+
+.horizontal-separator {
+  height: 8px; /* Épaisseur de la barre */
+  background-color: #60a337; /* Couleur de la barre */
+  border-radius: 180px; /* Rayon de la bordure pour arrondir */
+  filter: blur(0px); /* Effet de flou */
+}
+
+/* STYLE POUR LE HERO */
+.animate-slide-left {
+  animation: slide-right 1s ease-in-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-left 1s ease-in-out forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* STYLE POUR LE HEADER */
+.HeaderAnimation {
+  animation: HeaderAnimation 1s ease-out forwards;
+}
+
+@keyframes HeaderAnimation {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.nav-link {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #60a337;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-underline {
+  width: 100%;
 }
