@@ -1,6 +1,46 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+<template>
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="container px-4">
+      <div class="cards-grid">
+        <div class="card" v-for="(card, index) in cards" :key="index">
+          <div class="content-card">
+            <img :src="card.imageUrl" :alt="card.altText" />
+            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]">
+              <div class="p-4 text-white font-semibold">
+                <p>{{ card.description }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
 export default {
+  data() {
+    return {
+      cards: [
+        {
+          imageUrl: '/image/TaVue.png',
+          altText: 'Image 1',
+          description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint similique! Iste, quos?'
+        },
+        {
+          imageUrl: '/image/kyks.png',
+          altText: 'Image 2',
+          description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint similique! Iste, quos?'
+        },
+        {
+          imageUrl: '/image/kyks.png',
+          altText: 'Image 3',
+          description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint similique! Iste, quos?'
+        }
+      ]
+    }
+  },
   mounted() {
     const cards = document.querySelectorAll('.card')
     cards.forEach((card) => {
@@ -13,15 +53,12 @@ export default {
         let angleY = -(midCardWidth - x) / 8
         let angleX = (midCardHeight - y) / 8
 
-        // Appliquer la même transformation à la carte et au glow
         card.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`
         card.children[1].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`
 
-        // Calculer les coordonnées du glow
         let glowX = (x / cardRect.width) * 100
         let glowY = (y / cardRect.height) * 100
 
-        // Définir le gradient radial du glow
         card.children[1].style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, rgb(200, 247, 211), transparent)`
       })
 
@@ -35,82 +72,19 @@ export default {
 }
 </script>
 
-<template>
-  <div class="container p-12">
-    <div class="cards-grid">
-      <div class="card">
-        <div class="content-card">
-          <img src="/image/TaVue.png" alt="" />
-          <div
-            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
-          >
-            <div class="p-4 text-white font-semibold">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
-                similique! Iste, quos?
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="glow"></div>
-      </div>
-      <div class="card">
-        <div class="content-card">
-          <img src="/image/kyks.png" alt="" />
-          <div
-            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
-          >
-            <div class="p-4 text-white font-semibold">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
-                similique! Iste, quos?
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="glow"></div>
-      </div>
-      <div class="card">
-        <div class="content-card">
-          <img src="/image/kyks.png" alt="" />
-          <div
-            class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
-          >
-            <div class="p-4 text-white font-semibold">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur optio sint
-                similique! Iste, quos?
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="glow"></div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container {
-  width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 20px;
 }
 .card {
   width: 100%;
   height: 0;
-  padding-bottom: 90%; /* Rapport d'aspect 4:3 (3/4 = 0.75, donc padding-bottom: 75%) */
+  padding-bottom: 90%;
   perspective: 1000px;
   position: relative;
 }
