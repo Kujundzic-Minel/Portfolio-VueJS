@@ -31,13 +31,15 @@ const isOpen = ref(false)
         </li>
       </ul>
       <div class="flex items-center">
-        <div
-          class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
+        <a href="/contact"
+          ><div
+            class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
+          >
+            <button class="text-white font-bold text-xs sm:text-sm lg:text-xl px-2 sm:px-4 lg:px-6">
+              Contact me
+            </button>
+          </div></a
         >
-          <button class="text-white font-bold text-xs sm:text-sm lg:text-xl px-2 sm:px-4 lg:px-6">
-            <a href="/contact">Contact me</a>
-          </button>
-        </div>
         <div class="md:hidden ml-2 sm:ml-4">
           <button class="text-white focus:outline-none" @click="isOpen = !isOpen">
             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,11 +62,13 @@ const isOpen = ref(false)
         </li>
         <li class="list-none">Skills</li>
         <li class="list-none">Project</li>
-        <div
-          class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
+        <a href="/contact"
+          ><div
+            class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
+          >
+            <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
+          </div></a
         >
-          <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
-        </div>
       </ul>
     </div>
   </nav>
