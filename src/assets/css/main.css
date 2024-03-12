@@ -25,6 +25,19 @@ a {
   cursor: none; /* Désactivez le curseur par défaut */
 }
 
+/* Masque le curseur personnalisé pour les écrans de tablette et de téléphone */
+@media (max-width: 1024px) { /* Limite pour tablettes et téléphones */
+  #mouse {
+    display: none; /* Cache le curseur personnalisé */
+  }
+
+  html,
+  button,
+  a {
+    cursor: auto; /* Réactive le curseur par défaut */
+  }
+}
+
 /* STYLE POUR LES CARDS */
 .container {
   max-width: 1200px;
