@@ -16,6 +16,10 @@ body {
   z-index: 999;
 }
 
+html, button, a {
+  cursor: none; /* Désactivez le curseur par défaut */
+}
+
 /* STYLE POUR LES CARDS */
 .container {
   max-width: 1200px;
