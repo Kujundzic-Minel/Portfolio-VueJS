@@ -4,6 +4,7 @@ import Hero from '@/components/Hero.vue';
 import mySkills from '@/components/mySkills.vue';
 import skillBar from '@/components/skillBar.vue';
 import cards from '@/components/cards.vue';
+import testsupa from '@/components/testsupa.vue';
 </script>
 <template>
   <Hero />
@@ -12,4 +13,5 @@ import cards from '@/components/cards.vue';
   <skillBar />
   <cards />
   <skillBar />
+  <testsupa />
 </template>

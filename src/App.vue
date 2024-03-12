@@ -9,7 +9,9 @@
 <template>
   <Header />
 
-  <RouterView />
+  <suspense>
+    <RouterView />
+  </suspense>
 
   <Footer />
 </template>
