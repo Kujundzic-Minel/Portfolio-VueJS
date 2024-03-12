@@ -33,7 +33,7 @@ const isOpen = ref(false)
         </li>
       </ul>
       <div class="flex items-center">
-        <a href="/contact"
+        <a href="../pages/contact.vue"
           ><div
             class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
           >
@@ -64,7 +64,7 @@ const isOpen = ref(false)
         </li>
         <li class="list-none">Skills</li>
         <li class="list-none">Project</li>
-        <a href="/contact"
+        <a href="../pages/contact.vue"
           ><div
             class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
           >
