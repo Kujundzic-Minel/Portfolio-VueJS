@@ -12,12 +12,16 @@ body {
   height: 20px; /* Taille réduite pour l'exemple */
   border-radius: 50%;
   border: 2px solid rgb(200, 247, 211);
+  background-color: rgb(200, 247, 211);
   transform: translate(-50%, -50%);
   pointer-events: none; /* Assurez-vous que le curseur ne gêne pas les clics */
   z-index: 999;
+  filter: invert;
 }
 
-html, button, a {
+html,
+button,
+a {
   cursor: none; /* Désactivez le curseur par défaut */
 }
 
@@ -86,6 +90,37 @@ html, button, a {
 }
 
 /* STYLE POUR LE HERO */
+
+.boutondownload {
+  position: relative;
+}
+
+.boutondownload:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -15%;
+  left: -5%;
+  width: 110%;
+  height: 130%;
+  background-image: linear-gradient(to right, #60A337, #8ebe71, #B7F05B);
+  transition: all 0.3s;
+  border-radius: 9999px;
+}
+
+.boutondownload:before:hover {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -15%;
+  left: -5%;
+  width: 110%;
+  height: 130%;
+  background-color: #fffff;
+  transition: all 0.3s;
+  border-radius: 9999px;
+}
+
 .animate-slide-left {
   animation: slide-right 1s ease-in-out forwards;
 }

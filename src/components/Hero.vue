@@ -17,14 +17,14 @@
       </p>
       <div class="flex flex-col md:flex-row justify-center md:justify-start">
         <button
-          class="px-6 py-3 rounded-full mr-4 mb-4 md:mb-0 bg-gradient-to-br from-[#60A337] via-[#8ebe71] to-[#B7F05B] hover:bg-slate-200 text-black w-full md:w-fit"
+          class="px-6 py-3 rounded-full mr-4 mb-4 md:mb-0 bg-gradient-to-br from-[#60A337] via-[#8ebe71] to-[#B7F05B] text-[#272727] md:w-fit hover:font-bold transition-all "
         >
           Hire me
         </button>
         <button
-          class="px-6 py-3 rounded-full bg-transparent hover:bg-slate-800 text-white border w-full md:w-fit"
+          class="px-6 py-3 rounded-full bg-transparent boutondownload bg-[#272727] text-white w-full md:w-fit hover:font-bold transition-all"
         >
-          <a href="../../public/extra/Minel_KUJUNDZIC.pdf" download>Download CV</a>
+          <a href="../../public/extra/Minel_KUJUNDZIC.pdf"  download>Download CV</a>
         </button>
       </div>
     </div>
