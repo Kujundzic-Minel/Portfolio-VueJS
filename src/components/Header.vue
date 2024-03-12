@@ -9,13 +9,15 @@ const isOpen = ref(false)
     <div
       class="flex justify-between items-center p-2 bg-[#353232] bg-opacity-50 rounded-full border border-[#60A337] backdrop-blur-sm"
     >
-      <div class="flex items-center">
-        <img
-          src="/image/MK-LOGO.svg"
-          alt="Minel Kujundzic Logo"
-          class="h-8 sm:h-10 lg:h-14 px-2 sm:px-4 lg:px-7"
-        />
-      </div>
+      <a href="/">
+        <div class="flex items-center">
+          <img
+            src="/image/MK-LOGO.svg"
+            alt="Minel Kujundzic Logo"
+            class="h-8 sm:h-10 lg:h-14 px-2 sm:px-4 lg:px-7"
+          />
+        </div>
+      </a>
       <ul
         class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl"
       >
