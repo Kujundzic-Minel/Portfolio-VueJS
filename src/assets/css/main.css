@@ -42,21 +42,25 @@ a {
 .container {
   max-width: 1200px;
 }
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
 .card {
   width: 100%;
   height: 0;
   padding-bottom: 90%;
-  perspective: 1000px;
+  perspective: 1000px; /* 3D perspective */
   position: relative;
 }
+
 .card:hover {
   z-index: 10;
 }
+
 .content-card {
   width: 100%;
   height: 100%;
@@ -67,11 +71,13 @@ a {
   top: 0;
   left: 0;
 }
+
 .content-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .glow {
   position: absolute;
   top: 0;
@@ -83,9 +89,28 @@ a {
   mix-blend-mode: hard-light;
   background: radial-gradient(circle at 50% 0%, rgb(200, 247, 211), transparent);
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    perspective: none; /* Annule l'effet de perspective 3D */
+    transform: none !important; /* Assure que les cartes ne bougent pas */
+  }
+
+  .card:hover {
+    transform: none !important; /* Empêche les cartes de bouger au survol/touch */
+    z-index: auto; /* Réinitialise le z-index au cas où il causerait des problèmes */
+  }
+
+  .content-card, .glow {
+    transform: none !important; /* Annule les transformations pour contenu et glow */
+  }
+
+  .glow {
+    display: none; /* Cache le glow */
   }
 }
 
