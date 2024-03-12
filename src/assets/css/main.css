@@ -124,7 +124,7 @@ a {
   height: 8px; /* Épaisseur de la barre */
   background-color: #60a337; /* Couleur de la barre */
   border-radius: 180px; /* Rayon de la bordure pour arrondir */
-  filter: blur(0px); /* Effet de flou */
+  filter: blur(2px); /* Effet de flou */
 }
 
 /* STYLE POUR LE HERO */

@@ -12,7 +12,7 @@
           <div class="content-card" :style="{ transform: project.transform }">
             <img :src="project.project_image" :alt="project.project_name" />
             <div
-              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent rounded-[25px]"
+              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/90 to-transparent"
             >
               <div class="p-4 text-white font-semibold">
                 <h2>{{ project.project_name }}</h2>
