@@ -1,7 +1,18 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { ref } from 'vue'
+
 const isOpen = ref(false)
+
+const scrollToSkills = () => {
+  const skillsSection = document.getElementById('skills-section')
+  skillsSection.scrollIntoView({ behavior: 'smooth' })
+}
+
+const scrollToProjects = () => {
+  const projectsSection = document.getElementById('projects-section')
+  projectsSection.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -18,20 +29,20 @@ const isOpen = ref(false)
           />
         </div>
       </a>
-      <ul
-        class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl"
-      >
-        <li class="list-none nav-link hover:font-semibold">
-          <a href="/">Home</a>
-          <span class="nav-underline"></span>
-        </li>
-        <li class="list-none nav-link hover:font-semibold">
-          Skills <span class="nav-underline"></span>
-        </li>
-        <li class="list-none nav-link hover:font-semibold">
-          Project <span class="nav-underline"></span>
-        </li>
-      </ul>
+      <ul class="hidden md:flex items-center space-x-2 md:space-x-4 z-40 text-white text-xs sm:text-sm lg:text-xl">
+  <li class="list-none nav-link hover:font-semibold">
+    <a href="/">Home</a>
+    <span class="nav-underline"></span>
+  </li>
+  <li class="list-none nav-link hover:font-semibold">
+    <a href="#" @click.prevent="scrollToSkills">Skills</a>
+    <span class="nav-underline"></span>
+  </li>
+  <li class="list-none nav-link hover:font-semibold">
+    <a href="#" @click.prevent="scrollToProjects">Project</a>
+    <span class="nav-underline"></span>
+  </li>
+</ul>
       <div class="flex items-center">
         <a href="../pages/contact.vue"
           ><div
@@ -62,8 +73,13 @@ const isOpen = ref(false)
         <li class="list-none">
           <a href="/">Home</a>
         </li>
-        <li class="list-none">Skills</li>
-        <li class="list-none">Project</li>
+        <li class="list-none nav-link hover:font-semibold" @click="scrollToSection('skills')">
+          Skills <span class="nav-underline"></span>
+        </li>
+        <li class="list-none nav-link hover:font-semibold" @click="scrollToSection('projects')">
+          Project <span class="nav-underline"></span>
+        </li>
+
         <a href="../pages/contact.vue"
           ><div
             class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
