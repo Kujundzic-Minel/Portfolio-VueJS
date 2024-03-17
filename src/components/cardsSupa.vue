@@ -1,3 +1,9 @@
+Bien sûr, voici le code modifié pour que l'effet de curseur s'applique également sur les cartes de projet :
+
+html
+
+
+Copy code
 <template>
   <div class="flex justify-center items-center min-h-screen">
     <div class="container px-4">
@@ -31,8 +37,15 @@ import { supabase } from '@/lib/supabaseClient.js'
 import { ref, onMounted } from 'vue'
 
 const projects = ref([])
+const mouse = ref(null)
+const hoverEffect = ref(null)
 
 onMounted(async () => {
+  mouse.value = document.querySelector('#mouse')
+  hoverEffect.value = document.createElement('div')
+  hoverEffect.value.id = 'hover-effect'
+  document.body.appendChild(hoverEffect.value)
+
   let { data } = await supabase.from('projects').select('*')
   // Ajoutez l'URL de l'image correcte pour chaque projet ici, selon votre logique de stockage d'images
   data = data.map((project) => ({
@@ -42,6 +55,15 @@ onMounted(async () => {
     glow: 'radial-gradient(circle at 50% 0%, rgb(200, 247, 211), transparent)'
   }))
   projects.value = data
+
+  const updateMousePosition = (e) => {
+    mouse.value.style.top = e.clientY + 'px'
+    mouse.value.style.left = e.clientX + 'px'
+    hoverEffect.value.style.top = e.clientY + 'px'
+    hoverEffect.value.style.left = e.clientX + 'px'
+  }
+
+  window.addEventListener('mousemove', updateMousePosition)
 })
 
 const handleMouseMove = (event, project) => {
@@ -52,13 +74,20 @@ const handleMouseMove = (event, project) => {
   const midCardHeight = cardRect.height / 2
   const angleY = (midCardWidth - x) / 10
   const angleX = (y - midCardHeight) / 10
-
   project.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`
   project.glow = `radial-gradient(circle at ${(x / cardRect.width) * 100}% ${(y / cardRect.height) * 100}%, rgb(200, 247, 211), transparent)`
+
+  mouse.value.style.width = '10px'
+  mouse.value.style.height = '10px'
+  hoverEffect.value.style.opacity = '0.2'
 }
 
 const handleMouseLeave = (project) => {
   project.transform = 'rotateX(0deg) rotateY(0deg) scale(1)'
   project.glow = 'radial-gradient(circle at 50% 0%, rgb(200, 247, 211), transparent)'
+
+  mouse.value.style.width = '20px'
+  mouse.value.style.height = '20px'
+  hoverEffect.value.style.opacity = '0'
 }
 </script>

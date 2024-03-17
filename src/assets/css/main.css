@@ -5,36 +5,54 @@ body {
 
 /* STYLE POUR LE CURSEUR PERSONNALISE */
 #mouse {
-  position: fixed; /* Changé de 'absolute' à 'fixed' pour un positionnement global */
-  top: 0; /* Initialisé à 0; il sera mis à jour par JavaScript */
-  left: 0; /* Initialisé à 0; il sera mis à jour par JavaScript */
-  width: 20px; /* Taille réduite pour l'exemple */
-  height: 20px; /* Taille réduite pour l'exemple */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid rgb(200, 247, 211);
   background-color: rgb(200, 247, 211);
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Assurez-vous que le curseur ne gêne pas les clics */
+  pointer-events: none;
   z-index: 999;
   filter: invert;
+  transition: width 0.3s, height 0.3s;
+}
+
+#hover-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(200, 247, 211, 0.2);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 html,
 button,
 a {
-  cursor: none; /* Désactivez le curseur par défaut */
+  cursor: none;
 }
 
 /* Masque le curseur personnalisé pour les écrans de tablette et de téléphone */
-@media (max-width: 1024px) { /* Limite pour tablettes et téléphones */
-  #mouse {
-    display: none; /* Cache le curseur personnalisé */
+@media (max-width: 1024px) {
+  /* Limite pour tablettes et téléphones */
+  #mouse,
+  #hover-effect {
+    display: none;
   }
 
   html,
   button,
   a {
-    cursor: auto; /* Réactive le curseur par défaut */
+    cursor: auto;
   }
 }
 
