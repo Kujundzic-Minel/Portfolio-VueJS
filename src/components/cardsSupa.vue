@@ -2,29 +2,25 @@
   <div class="flex justify-center items-center min-h-screen">
     <div class="container px-4">
       <div class="cards-grid">
-        <div
-          class="card"
+        <router-link
           v-for="project in projects"
           :key="project.id"
-          @mousemove="handleMouseMove($event, project)"
-          @mouseleave="handleMouseLeave(project)"
+          :to="`/projets/${project.id}`"
+          class="card"
+          @mousemove.native="handleMouseMove($event, project)"
+          @mouseleave.native="handleMouseLeave(project)"
         >
           <div class="content-card" :style="{ transform: project.transform }">
             <img :src="project.project_image" :alt="project.project_name" />
-            <div
-              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/90 to-transparent"
-            >
+            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/90 to-transparent">
               <div class="p-4 text-white font-semibold">
                 <h2>{{ project.project_name }}</h2>
                 <p>{{ project.project_desc }}</p>
               </div>
             </div>
           </div>
-          <div
-            class="glow"
-            :style="{ background: project.glow, transform: project.transform }"
-          ></div>
-        </div>
+          <div class="glow" :style="{ background: project.glow, transform: project.transform }"></div>
+        </router-link>
       </div>
     </div>
   </div>
