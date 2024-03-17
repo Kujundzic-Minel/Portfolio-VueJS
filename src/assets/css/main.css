@@ -17,7 +17,9 @@ body {
   pointer-events: none;
   z-index: 999;
   filter: invert;
-  transition: width 0.3s, height 0.3s;
+  transition:
+    width 0.3s,
+    height 0.3s;
 }
 
 #hover-effect {
@@ -123,7 +125,8 @@ a {
     z-index: auto; /* Réinitialise le z-index au cas où il causerait des problèmes */
   }
 
-  .content-card, .glow {
+  .content-card,
+  .glow {
     transform: none !important; /* Annule les transformations pour contenu et glow */
   }
 
@@ -159,7 +162,7 @@ a {
   left: -5%;
   width: 110%;
   height: 130%;
-  background-image: linear-gradient(to right, #60A337, #8ebe71, #B7F05B);
+  background-image: linear-gradient(to right, #60a337, #8ebe71, #b7f05b);
   transition: all 0.3s;
   border-radius: 9999px;
 }
