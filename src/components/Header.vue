@@ -56,7 +56,7 @@ const closeMenu = () => {
         </li>
       </ul>
       <div class="flex items-center">
-        <a href="../pages/contact.vue"
+        <a href="mailto:minelkujundzic@icloud.com"
           ><div
             class="hidden md:block p-1 sm:p-2 lg:p-4 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover"
           >
@@ -91,11 +91,13 @@ const closeMenu = () => {
           <RouterLink to="/whoiam" @click="closeMenu">Who I am</RouterLink>
         </li>
         <RouterLink to="../pages/contact.vue" @click="closeMenu">
-          <div
-            class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
-          >
-            <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
-          </div>
+          <a href="mailto:minelkujundzic@icloud.com">
+            <div
+              class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
+            >
+              <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
+            </div>
+          </a>
         </RouterLink>
       </ul>
     </div>
