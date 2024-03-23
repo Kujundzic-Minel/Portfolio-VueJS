@@ -58,6 +58,7 @@ a {
   }
 }
 
+
 /* STYLE POUR LES CARDS */
 .container {
   max-width: 1200px;
@@ -150,35 +151,6 @@ a {
 
 /* STYLE POUR LE HERO */
 
-.boutondownload {
-  position: relative;
-}
-
-.boutondownload:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -15%;
-  left: -5%;
-  width: 110%;
-  height: 130%;
-  background-image: linear-gradient(to right, #60a337, #8ebe71, #b7f05b);
-  transition: all 0.3s;
-  border-radius: 9999px;
-}
-
-.boutondownload:before:hover {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -15%;
-  left: -5%;
-  width: 110%;
-  height: 130%;
-  background-color: #fffff;
-  transition: all 0.3s;
-  border-radius: 9999px;
-}
 
 .animate-slide-left {
   animation: slide-right 1s ease-in-out forwards;

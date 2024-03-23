@@ -21,15 +21,16 @@
         >
           Hire me
         </button>
-        <button
-          class="px-6 py-3 rounded-full bg-transparent boutondownload bg-[#272727] text-white w-full md:w-fit hover:font-bold transition-all"
+        <a href="../../public/extra/Minel_KUJUNDZIC.pdf"  download>
+          <button
+          class="px-6 py-3 rounded-full bg-transparent boutondownload bg-white text-[#272727] w-full md:w-fit hover:font-bold transition-all"
         >
-          <a href="../../public/extra/Minel_KUJUNDZIC.pdf"  download>Download CV</a>
-        </button>
+          Download CV
+        </button></a>
       </div>
     </div>
     <div class="md:w-1/2 p-4 opacity-0 -translate-x-full animate-slide-left">
-      <img src="/image/MK-PP.svg" alt="Minel's Profile Picture" />
+      <img src="/image/MK-PP-Cartoon.png" alt="Minel's Profile Picture" />
     </div>
   </section>
 </template>
