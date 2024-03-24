@@ -83,15 +83,13 @@ const closeMenu = () => {
         </li>
         <li class="list-none hover:font-semibold" @click="scrollToSkills">Skills</li>
         <li class="list-none hover:font-semibold" @click="scrollToProjects">Project</li>
-        <RouterLink to="../pages/contact.vue" @click="closeMenu">
-          <a href="mailto:minelkujundzic@icloud.com">
+          <a href="mailto:minelkujundzic@icloud.com" >
             <div
               class="p-2 border rounded-full border-[#60A337] bg-gradient-to-r from-[#52773B] to-[#364d27] gradient-hover text-center mt-4"
             >
               <button class="text-white font-bold text-lg px-6 contact-btn">Contact me</button>
             </div>
           </a>
-        </RouterLink>
       </ul>
     </div>
   </nav>
