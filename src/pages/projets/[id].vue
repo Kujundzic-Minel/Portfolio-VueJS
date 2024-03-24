@@ -1,8 +1,24 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { supabase } from '@/lib/supabaseClient.js';
+
+const route = useRoute();
+const projectId = route.params.id;
+const projectDetails = ref({});
+
+onMounted(async () => {
+  const { data, error } = await supabase
+    .from('projects')
+    .select('*')
+    .eq('id', projectId)
+    .single();
+  projectDetails.value = data;
+});
+</script>
 <template>
     <div class="container mx-auto my-8 p-4">
-      <!-- Conteneur pour l'image et les détails du projet -->
       <div class="flex flex-col lg:flex-row">
-        <!-- Conteneur pour l'image -->
         <div class="lg:w-1/2 mb-8 lg:mb-0">
           <img
             class="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -11,7 +27,6 @@
             style="max-width: 500px; max-height: 500px;"
           />
         </div>
-        <!-- Conteneur pour les informations -->
         <div class="lg:w-1/2 lg:pl-8">
           <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">
             {{ projectDetails.project_name }}
@@ -46,25 +61,4 @@
     </div>
   </template>
   
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  import { useRoute } from 'vue-router';
-  import { supabase } from '@/lib/supabaseClient.js';
-  
-  const route = useRoute();
-  const projectId = route.params.id;
-  const projectDetails = ref({});
-  
-  onMounted(async () => {
-    const { data, error } = await supabase
-      .from('projects')
-      .select('*')
-      .eq('id', projectId)
-      .single();
-    projectDetails.value = data;
-  });
-  </script>
-  
-  <style scoped>
-  /* Aucun style supplémentaire requis */
-  </style>
+ 

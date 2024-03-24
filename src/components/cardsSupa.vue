@@ -1,9 +1,3 @@
-Bien sûr, voici le code modifié pour que l'effet de curseur s'applique également sur les cartes de projet :
-
-html
-
-
-Copy code
 <template>
   <div class="flex justify-center items-center min-h-screen">
     <div class="container px-4">
@@ -47,10 +41,9 @@ onMounted(async () => {
   document.body.appendChild(hoverEffect.value)
 
   let { data } = await supabase.from('projects').select('*')
-  // Ajoutez l'URL de l'image correcte pour chaque projet ici, selon votre logique de stockage d'images
   data = data.map((project) => ({
     ...project,
-    imageUrl: `/image/${project.project_name}.png`, // Ajustez selon le chemin d'accès réel
+    imageUrl: `/image/${project.project_name}.png`,
     transform: '',
     glow: 'radial-gradient(circle at 50% 0%, rgb(200, 247, 211), transparent)'
   }))
