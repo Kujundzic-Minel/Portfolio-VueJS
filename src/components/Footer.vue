@@ -28,7 +28,6 @@ const scrollToProjects = () => {
       <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
         <div class="flex flex-col md:flex-row justify-center md:justify-start mb-4 md:mb-0">
           <a href="#" class="hover:text-gray-300 mb-2 md:mb-0 md:mr-6" @click.prevent="scrollToHome">Home</a>
-          <a href="#" class="hover:text-gray-300 mb-2 md:mb-0 md:mr-6" @click.prevent="scrollToAbout">Who I am</a>
           <a href="#" class="hover:text-gray-300 mb-2 md:mb-0 md:mr-6" @click.prevent="scrollToSkills">My skills</a>
           <a href="#" class="hover:text-gray-300 mb-2 md:mb-0" @click.prevent="scrollToProjects">My projects</a>
         </div>

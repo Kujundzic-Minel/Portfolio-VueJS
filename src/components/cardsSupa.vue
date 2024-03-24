@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen">
+  <div class="flex justify-center items-center m-10">
     <div class="container px-4">
       <div class="cards-grid">
         <router-link

@@ -50,10 +50,6 @@ const closeMenu = () => {
           <RouterLink to="#" @click.prevent="scrollToProjects">Project</RouterLink>
           <span class="nav-underline"></span>
         </li>
-        <li class="list-none nav-link hover:font-semibold">
-          <RouterLink to="/whoiam">Who I am</RouterLink>
-          <span class="nav-underline"></span>
-        </li>
       </ul>
       <div class="flex items-center">
         <a href="mailto:minelkujundzic@icloud.com"
@@ -87,9 +83,6 @@ const closeMenu = () => {
         </li>
         <li class="list-none hover:font-semibold" @click="scrollToSkills">Skills</li>
         <li class="list-none hover:font-semibold" @click="scrollToProjects">Project</li>
-        <li class="list-none hover:font-semibold">
-          <RouterLink to="/whoiam" @click="closeMenu">Who I am</RouterLink>
-        </li>
         <RouterLink to="../pages/contact.vue" @click="closeMenu">
           <a href="mailto:minelkujundzic@icloud.com">
             <div
