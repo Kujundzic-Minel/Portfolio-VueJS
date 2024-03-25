@@ -17,7 +17,7 @@
       </p>
       <div class="flex flex-col md:flex-row justify-center md:justify-start">
         <button
-          class="px-6 py-3 rounded-full mr-4 mb-4 md:mb-0 bg-gradient-to-br from-[#60A337] via-[#8ebe71] to-[#B7F05B] text-[#272727] md:w-fit hover:font-bold transition-all"
+          class="px-6 py-3 rounded-full sm:mx-4 lg:mx-4 mb-4 md:mb- bg-gradient-to-br from-[#60A337] via-[#8ebe71] to-[#B7F05B] text-[#272727] md:w-fit hover:font-bold transition-all"
         >
           Hire me
         </button>
