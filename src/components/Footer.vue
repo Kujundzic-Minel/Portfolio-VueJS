@@ -32,7 +32,7 @@ const scrollToProjects = () => {
           <a href="#" class="hover:text-gray-300 mb-2 md:mb-0" @click.prevent="scrollToProjects">My projects</a>
         </div>
         <div class="mb-4 md:mb-0">
-          <a href="mailto:your-email@example.com" class="hover:text-gray-300">Contact me</a>
+          <a href="mailto:minelkujundzic@icloud.com" class="hover:text-gray-300">Contact me</a>
         </div>
         <div>
           <img src="/image/MK-LOGO.svg" alt="Minel's Logo" class="w-20 md:w-24 lg:w-32 mx-auto md:mx-0 md:ml-auto" />
